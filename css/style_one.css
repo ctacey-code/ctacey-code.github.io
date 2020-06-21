@@ -1,0 +1,286 @@
+/* 
+Wedding Colors:
+Pink-Red: RGB(221, 184, 186) / HSL(357, 35.2%, 79.4%)
+Very Dark Blue: RGB(0, 0, 103) / HSL(240, 100%, 20.2%)
+Maroon: RGB(128, 0, 0) / HSL(0, 100%, 25.1%)
+Grayish Azure: RGB(102, 140, 178) / HSL(210, 33%, 54.9%)
+
+
+Font references:
+font-family: 'Sacramento', cursive;
+font-family: 'Open Sans Condensed', sans-serif;
+*/
+
+
+/* Global */
+
+* {
+    background-color: rgb(212, 245, 212);
+    overflow-x: hidden;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* Banner */
+
+.banner {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 100%;
+    overflow: hidden;
+    background-image: url("../images/banner_1.JPG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 7vw;
+    font-family: 'Sacramento', cursive;
+    font-style: italic;
+    grid-row: 3 / 4;
+    z-index: 10;
+    grid-column: 1 / 2;
+    background-color: transparent;
+    justify-self: center;
+    align-self: start;
+    padding-bottom: 1vw;
+}
+
+.banner h2 {
+    color: white;
+    font-size: 4vw;
+    font-family: 'Open Sans Condensed', sans-serif;
+    grid-row: 3 / 4;
+    z-index: 10;
+    grid-column: 1 / 2;
+    background-color: transparent;
+    justify-self: center;
+    align-self: end;
+}
+
+
+/* Body */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 2rem;
+    margin-top: 2rem;
+    z-index: 1;
+}
+
+
+/* Venue Information */
+
+.venue-address {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    justify-self: center;
+    align-self: center;
+    z-index: 10;
+    background-color: transparent;
+    text-align: center;
+}
+
+.venue-address h2, 
+.venue-address a, 
+.venue-address p {
+    background-color: transparent;
+    margin: 0.25vw 0.25vw;
+}
+
+.venue-address h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 4vw;
+}
+
+.venue-address a,
+.venue-address p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2vw;
+}
+
+.venue-image {
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+
+.venue-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Schedule */
+
+.schedule-friday,
+.schedule-saturday {
+    grid-row-start: 2;
+    border: 2px solid white;
+    background-color: white;
+    padding: 0.25vw 0.5vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.schedule-friday *,
+.schedule-saturday * {
+    background-color: white;
+}
+
+.schedule-friday p,
+.schedule-saturday p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2vw;
+}
+
+.schedule-friday h2,
+.schedule-saturday h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 4vw;
+    text-align: center;
+}
+
+.schedule-friday h2 {
+    margin-bottom: 0;
+}
+
+.schedule-friday h3 {
+    margin-top: 0;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+
+/* Lower Grid */
+
+.lower-grid {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    align-items: stretch;
+}
+
+
+/* Hotel Information */
+
+.hotel {
+    grid-row: 1 / 2;
+    background-color: white;
+    align-self: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hotel * {
+    background-color: white;
+    text-align: center;
+}
+
+.hotel h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 4vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0;
+}
+
+.hotel h3 {
+    font-family: 'Open Sans Condensed', cursive;
+    font-size: 3vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.hotel p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2vw;
+    margin: 0 0;
+}
+
+.hotel #hotel_end {
+    margin-bottom: 2vw;
+}
+
+
+/* Registry */
+
+.registry {
+    grid-row: 2 / 3;
+    align-self: start;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.registry * {
+    text-align: center;
+}
+
+.registry h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 4vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.registry p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2vw;
+    margin: 0 0;
+}
+
+
+/* Footer */
+
+footer {
+    font-family: 'Open sans Condensed', sans-serif;
+    font-size: 1.5vw;
+}
+
+
+/* Media Query for Smartphones */
+
+@media only screen and (max-width: 550px) {
+
+
+    /* Venue Information */
+
+    .venue-address {
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+
+    .venue-image {
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+    
+
+    /* Schedule */
+
+    .schedule-friday {
+        grid-row-start: 3;
+    }
+
+    .schedule-saturday {
+        grid-row-start: 4;
+    }
+
+    /* Schedule */
+
+    .schedule-friday,
+    .schedule-saturday {
+        padding: 0.25vw 0.5vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        margin-left: 30vw;
+        margin-right: 30vw;
+    }
+
+}
