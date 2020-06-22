@@ -246,6 +246,16 @@ footer {
 
 /* Media Query for Smartphones */
 
+@-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+@viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
 @media only screen and (max-width: 550px) {
 
 
